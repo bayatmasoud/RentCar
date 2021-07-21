@@ -16,10 +16,7 @@ class WhatsInclude extends StatelessWidget {
           controller: new ScrollController(keepScrollOffset: false),
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
-          // Create a grid with 2 columns. If you change the scrollDirection to
-          // horizontal, this produces 2 rows.
           crossAxisCount: 2,
-          // Generate 100 widgets that display their index in the List.
           children: List.generate(includes.length, (index) {
             return Row(
               children: [
