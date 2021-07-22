@@ -7,6 +7,7 @@ class WhatsInclude extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width * 0.8,
+        height: MediaQuery.of(context).size.height * 0.13,
         padding: EdgeInsets.only(left: 5.0),
         decoration: BoxDecoration(
             border: Border.all(width: 0.40, color: Colors.grey),

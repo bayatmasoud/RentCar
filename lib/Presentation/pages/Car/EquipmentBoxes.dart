@@ -13,12 +13,12 @@ class Equipments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
+      padding: EdgeInsets.only(top: 5.0, left: 20.0, right: 20.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Equipment(carEq: carEq),
-          SizedBox(height: 15.0),
+          SizedBox(height: 5.0),
           Row(
             children: [
               Column(
@@ -42,7 +42,7 @@ class Equipments extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 15.0),
+          SizedBox(height: 5.0),
           Row(
             children: [
               Column(
@@ -63,7 +63,7 @@ class Equipments extends StatelessWidget {
                     reqText: carEquipments[0].address,
                     favIcon: Icon(Icons.location_on),
                   ),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 5.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -83,7 +83,6 @@ class Equipments extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 20.0),
                 ],
               ),
             ],
