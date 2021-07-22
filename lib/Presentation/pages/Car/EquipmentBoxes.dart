@@ -33,7 +33,7 @@ class Equipments extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 5.0,
+                    height: 10.0,
                   ),
                   BoxDecorator(
                     reqText: carEq.explain,
@@ -42,7 +42,7 @@ class Equipments extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 5.0),
+          SizedBox(height: 10.0),
           Row(
             children: [
               Column(
@@ -57,13 +57,13 @@ class Equipments extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 5.0,
+                    height: 10.0,
                   ),
                   BoxDecorator(
                     reqText: carEquipments[0].address,
                     favIcon: Icon(Icons.location_on),
                   ),
-                  SizedBox(height: 5.0),
+                  SizedBox(height: 10.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [

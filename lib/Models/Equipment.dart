@@ -147,7 +147,7 @@ var carEquipments = [
       dreiver: false,
       explain: 'This is the best car',
       id: 1,
-      image: 'asset/images/2.png',
+      image: 'asset/images/5.jpg',
       perday: 120.0,
       gazoline: 70,
       gearshift: 'Auto',

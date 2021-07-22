@@ -41,7 +41,7 @@ class _CarCardState extends State<CarCard> {
                                 height: 165,
                                 width: MediaQuery.of(context).size.width * 0.4,
                                 child: ClipRRect(
-                                  child: Image.asset('asset/images/2.png',
+                                  child: Image.asset('asset/images/5.jpg',
                                       fit: BoxFit.contain),
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),

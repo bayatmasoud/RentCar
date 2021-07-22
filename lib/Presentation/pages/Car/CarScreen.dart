@@ -13,58 +13,58 @@ class _CarScreenState extends State<CarScreen> {
   final _carEq = carEquipments;
   @override
   Widget build(BuildContext context) {
+    int perday = (_carEq[0].perday).ceil();
+
     return Scaffold(
-      body: Column(
-        children: [
-          CarScreenSlider(carEq: _carEq[0]),
-          Container(
-            child: Column(
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.5,
-                  child: Card(
-                    elevation: 4,
-                    child: Container(
-                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(10.0),
-                                decoration: BoxDecoration(
-                                    color: Colors.blue[100],
-                                    borderRadius: BorderRadius.circular(54),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        blurRadius: 2,
-                                      )
-                                    ]),
-                                child: Text(
-                                  "\$${_carEq[0].perday} Per day",
-                                  style: TextStyle(
-                                      color: Colors.deepOrangeAccent[600],
-                                      fontWeight: FontWeight.bold),
-                                ),
+      body: SafeArea(
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CarScreenSlider(carEq: _carEq[0]),
+              Container(
+                child: Card(
+                  elevation: 0,
+                  child: Container(
+                    margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(10.0),
+                              decoration: BoxDecoration(
+                                  color: Colors.purple,
+                                  borderRadius: BorderRadius.circular(54),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 2,
+                                    )
+                                  ]),
+                              child: Text(
+                                "\$$perday Per day",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
                               ),
-                              TextButton(
-                                  onPressed: () {},
-                                  child: Text('Agent Policy')),
-                              TextButton(
-                                  onPressed: () {}, child: Text('Book Now'))
-                            ],
-                          ),
-                          Equipments(carEq: _carEq[0])
-                        ],
-                      ),
+                            ),
+                            TextButton(
+                                onPressed: () {}, child: Text('Agent Policy')),
+                            TextButton(
+                                onPressed: () {}, child: Text('Book Now'))
+                          ],
+                        ),
+                        Equipments(carEq: _carEq[0])
+                      ],
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

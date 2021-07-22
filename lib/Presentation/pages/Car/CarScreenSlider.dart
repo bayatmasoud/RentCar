@@ -9,72 +9,67 @@ class CarScreenSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        child: Column(
+        width: MediaQuery.of(context).size.width,
+        child: Stack(
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.4,
-                  width: MediaQuery.of(context).size.width * 0.95,
+            Container(
+              height: MediaQuery.of(context).size.height * 0.35,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage(carEq.image), fit: BoxFit.fill)),
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  height: 50,
+                  width: 100,
+                  child: Image.asset(
+                    carEq.brand,
+                    fit: BoxFit.scaleDown,
+                  ),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.topRight,
+              child: GestureDetector(
+                child: Container(
+                  margin: EdgeInsets.only(top: 2.0, right: 5.0),
+                  alignment: Alignment.center,
+                  height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(carEq.image), fit: BoxFit.fill)),
-                  child: Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Container(
-                      height: 50,
-                      width: 100,
-                      child: Image.asset(
-                        carEq.brand,
-                        fit: BoxFit.scaleDown,
-                      ),
-                    ),
-                  ),
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(40.0),
+                      boxShadow: [
+                        BoxShadow(color: Colors.grey, blurRadius: 5.0)
+                      ]),
+                  child: Icon(Icons.close),
                 ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: GestureDetector(
-                    child: Container(
-                      margin: EdgeInsets.only(top: 2.0, right: 5.0),
-                      alignment: Alignment.center,
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(40.0),
-                          boxShadow: [
-                            BoxShadow(color: Colors.grey, blurRadius: 5.0)
-                          ]),
-                      child: Icon(Icons.close),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Padding(
+                padding: EdgeInsets.only(left: 18.0, right: 18.0, bottom: 5.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.favorite_border,
+                      size: 30,
+                      color: Colors.red,
                     ),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
+                    SizedBox(width: 20.0),
+                    Icon(
+                      Icons.ios_share,
+                      size: 30,
+                      color: Colors.blue,
+                    )
+                  ],
                 ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding:
-                        EdgeInsets.only(left: 18.0, right: 18.0, bottom: 5.0),
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.favorite_border,
-                          size: 30,
-                          color: Colors.red,
-                        ),
-                        SizedBox(width: 20.0),
-                        Icon(
-                          Icons.ios_share,
-                          size: 30,
-                          color: Colors.blue,
-                        )
-                      ],
-                    ),
-                  ),
-                )
-              ],
+              ),
             )
           ],
         ),
