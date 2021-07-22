@@ -38,11 +38,8 @@ class CarScreenSlider extends StatelessWidget {
                   height: 40,
                   width: 40,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(40.0),
-                      boxShadow: [
-                        BoxShadow(color: Colors.grey, blurRadius: 5.0)
-                      ]),
+                    color: Colors.white,
+                  ),
                   child: Icon(Icons.close),
                 ),
                 onTap: () {
