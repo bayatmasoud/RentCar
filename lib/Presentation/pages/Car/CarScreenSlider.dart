@@ -9,66 +9,70 @@ class CarScreenSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        color: Colors.white,
         child: Column(
           children: [
             Stack(
               children: [
                 Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(14.0),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey,
-                          offset: Offset(0, 12),
-                          blurRadius: 16.0,
-                        )
-                      ]),
                   height: MediaQuery.of(context).size.height * 0.4,
-                  child: Image.asset(
-                    carEq.image,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                Container(
-                  alignment: Alignment.bottomLeft,
-                  padding: EdgeInsets.only(top: 10, left: 10),
-                  height: 70,
-                  width: 90,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(carEq.image), fit: BoxFit.fill)),
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Container(
+                      height: 50,
+                      width: 100,
+                      child: Image.asset(
                         carEq.brand,
                         fit: BoxFit.scaleDown,
                       ),
-                    ],
+                    ),
                   ),
                 ),
-                GestureDetector(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(top: 10, right: 10),
-                        alignment: Alignment.center,
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(40.0),
-                            boxShadow: [
-                              BoxShadow(color: Colors.grey, blurRadius: 20.0)
-                            ]),
-                        child: Icon(Icons.close),
-                      ),
-                    ],
+                Align(
+                  alignment: Alignment.topRight,
+                  child: GestureDetector(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 2.0, right: 5.0),
+                      alignment: Alignment.center,
+                      height: 40,
+                      width: 40,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(40.0),
+                          boxShadow: [
+                            BoxShadow(color: Colors.grey, blurRadius: 5.0)
+                          ]),
+                      child: Icon(Icons.close),
+                    ),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   ),
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                    padding:
+                        EdgeInsets.only(left: 18.0, right: 18.0, bottom: 5.0),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.favorite_border,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        SizedBox(width: 20.0),
+                        Icon(
+                          Icons.ios_share,
+                          size: 30,
+                          color: Colors.blue,
+                        )
+                      ],
+                    ),
+                  ),
                 )
               ],
             )
