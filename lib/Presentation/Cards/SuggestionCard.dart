@@ -11,7 +11,7 @@ class SuggestionCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
         ),
-        elevation: 4,
+        elevation: 2,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
