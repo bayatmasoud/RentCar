@@ -12,8 +12,8 @@ class SearchBarCard extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: pageShadowColor,
-                offset: Offset(0, 1),
-                blurRadius: 1.0,
+                offset: Offset(0, 4),
+                blurRadius: 4.0,
               )
             ]),
         child: Padding(

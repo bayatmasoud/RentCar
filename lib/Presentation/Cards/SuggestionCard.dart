@@ -1,63 +1,78 @@
 import 'package:flutter/material.dart';
+import 'package:istanbul_rent_car/Models/SearchSugestion.dart';
 
 class SuggestionCard extends StatelessWidget {
+  //final Suggestion _suggestion;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 7),
       height: MediaQuery.of(context).size.height * 0.1,
       width: MediaQuery.of(context).size.width * 0.98,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        elevation: 2,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Tooltip(
-                message: 'Cheapest Cars',
-                child: Image.asset(
-                  'asset/images/Cheapest.png',
-                  height: 40,
-                  width: 40,
-                )
-                // IconButton(icon: Icon(Icons.attach_money), onPressed: () {}),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width * 0.98,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemCount: suggestionlinkes.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return TextButton(
+                        onPressed: () {},
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(20.0),
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  color: Colors.brown,
+                                  boxShadow: [
+                                    BoxShadow(
+                                        blurRadius: 120.0,
+                                        offset: Offset(0, 10.0))
+                                  ]),
+                              child: Text('${suggestionlinkes[index].sugText}',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ],
+                        ));
+                  },
                 ),
-            Tooltip(
-                message: 'Recommanded Car',
-                child: Image.asset(
-                  'asset/images/recommanded.png',
-                  height: 50,
-                  width: 50,
-                )),
-            Tooltip(
-              message: 'Nearest Car',
-              child: IconButton(
-                icon: Icon(
-                  Icons.gps_fixed,
-                  size: 40,
-                ),
-                onPressed: () {},
-                hoverColor: Colors.red,
               ),
-            ),
-            Tooltip(
-                message: 'Electric Car',
-                child: Image.asset(
-                  'asset/images/electric.png',
-                  height: 40,
-                  width: 40,
-                )),
-            Tooltip(
-                message: 'Luxury Cars',
-                child: Image.asset(
-                  'asset/images/luxury.png',
-                  height: 40,
-                  width: 40,
-                )),
-          ],
-        ),
+            ],
+          ),
+          // TextButton(
+          //     style: TextButton.styleFrom(
+          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
+          //     onPressed: () {},
+          //     child: Text('Cheapest')),
+          // TextButton(
+          //     style: TextButton.styleFrom(
+          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
+          //     onPressed: () {},
+          //     child: Text('Recommanded')),
+          // TextButton(
+          //     style: TextButton.styleFrom(
+          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
+          //     onPressed: () {},
+          //     child: Text('Nearest')),
+          // TextButton(
+          //     style: TextButton.styleFrom(
+          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
+          //     onPressed: () {},
+          //     child: Text('Electric')),
+          // TextButton(
+          //     style: TextButton.styleFrom(
+          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
+          //     onPressed: () {},
+          //     child: Text('Luxury')),
+        ],
       ),
     );
   }

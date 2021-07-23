@@ -135,13 +135,20 @@ class _CarCardState extends State<CarCard> {
                             children: [
                               Icon(
                                 Icons.favorite_border_outlined,
-                                size: 28,
+                                size: 22,
                               ),
                               Icon(
                                 Icons.share_outlined,
-                                size: 28,
+                                size: 22,
+                              ),
+                              Icon(
+                                Icons.location_on,
+                                size: 22,
                               ),
                               TextButton(
+                                  style: TextButton.styleFrom(
+                                      minimumSize: Size.zero,
+                                      padding: EdgeInsets.zero),
                                   onPressed: () {
                                     Navigator.push(
                                       context,
@@ -151,6 +158,9 @@ class _CarCardState extends State<CarCard> {
                                   },
                                   child: Text('Detail')),
                               TextButton(
+                                  style: TextButton.styleFrom(
+                                      minimumSize: Size.zero,
+                                      padding: EdgeInsets.zero),
                                   onPressed: () {
                                     Navigator.push(
                                       context,
