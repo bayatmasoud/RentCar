@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:istanbul_rent_car/Models/Equipment.dart';
+import 'package:istanbul_rent_car/Presentation/pages/Map/MapScreen.dart';
 import 'Equipment.dart';
 import 'EquipmentDecorator.dart';
 import 'WhatsInclude.dart';
@@ -59,9 +60,17 @@ class Equipments extends StatelessWidget {
                   SizedBox(
                     height: 10.0,
                   ),
-                  BoxDecorator(
-                    reqText: carEquipments[0].address,
-                    favIcon: Icon(Icons.location_on),
+                  GestureDetector(
+                    child: BoxDecorator(
+                      reqText: carEquipments[0].address,
+                      favIcon: Icon(Icons.location_on),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MapSample()),
+                      );
+                    },
                   ),
                   SizedBox(height: 10.0),
                   Row(
