@@ -21,27 +21,51 @@ class SuggestionCard extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: suggestionlinkes.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return TextButton(
-                        onPressed: () {},
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(20.0),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  color: Colors.brown,
-                                  boxShadow: [
-                                    BoxShadow(
-                                        blurRadius: 120.0,
-                                        offset: Offset(0, 10.0))
-                                  ]),
-                              child: Text('${suggestionlinkes[index].sugText}',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold)),
+                    return Padding(
+                      padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 4.0),
+                        padding: EdgeInsets.all(4.0),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(18.0),
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset(0, 0.1), blurRadius: 0.05)
+                            ]),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            suggestionlinkes[index].sugImage,
+                            SizedBox(
+                              height: 5.0,
                             ),
+                            Text('${suggestionlinkes[index].sugText}')
                           ],
-                        ));
+                        ),
+                      ),
+                    );
+                    // TextButton(
+                    //     onPressed: () {},
+                    //     child: Row(
+                    //       children: [
+                    //         Container(
+                    //           padding: EdgeInsets.all(20.0),
+                    //           decoration: BoxDecoration(
+                    //               borderRadius: BorderRadius.circular(10.0),
+                    //               color: Colors.white,
+                    //               boxShadow: [
+                    //                 BoxShadow(
+                    //                     blurRadius: 120.0,
+                    //                     offset: Offset(0, 10.0))
+                    //               ]),
+                    //           child: Text('${suggestionlinkes[index].sugText}',
+                    //               style: TextStyle(
+                    //                   color: Colors.black,
+                    //                   fontWeight: FontWeight.bold)),
+                    //         ),
+                    //       ],
+                    //     ));
                   },
                 ),
               ),

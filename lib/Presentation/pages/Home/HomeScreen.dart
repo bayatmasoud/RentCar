@@ -39,6 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ]),
                   ),
                   SuggestionCard(),
+                  Divider(
+                    color: Colors.grey,
+                  ),
                   CarCard()
                 ],
               ),
