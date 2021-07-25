@@ -8,6 +8,7 @@ class CarScreenSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      bottom: false,
       child: Container(
         width: MediaQuery.of(context).size.width,
         child: Stack(

@@ -153,7 +153,7 @@ var carEquipments = [
       gearshift: 'Auto',
       airCondition: 'Auto',
       include: [
-        'Free canclation',
+        'Free cancelation',
         'Collision Damage Waiver',
         'Third Party Liability (TPL)',
         'Unlimited Mileage',

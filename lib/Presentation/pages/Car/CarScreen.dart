@@ -17,6 +17,7 @@ class _CarScreenState extends State<CarScreen> {
 
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: Container(
           height: MediaQuery.of(context).size.height,
           child: Column(

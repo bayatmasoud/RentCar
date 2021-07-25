@@ -33,69 +33,38 @@ class SuggestionCard extends StatelessWidget {
                               BoxShadow(
                                   offset: Offset(0, 0.1), blurRadius: 0.05)
                             ]),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            suggestionlinkes[index].sugImage,
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Text('${suggestionlinkes[index].sugText}')
-                          ],
+                        child: Container(
+                          width: 140,
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              suggestionlinkes[index].sugImage,
+                              SizedBox(
+                                height: 7.0,
+                              ),
+                              Container(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 10.0),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(18.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                            offset: Offset(0, 0.5),
+                                            blurRadius: 3)
+                                      ]),
+                                  child: Text(
+                                      '${suggestionlinkes[index].sugText}'))
+                            ],
+                          ),
                         ),
                       ),
                     );
-                    // TextButton(
-                    //     onPressed: () {},
-                    //     child: Row(
-                    //       children: [
-                    //         Container(
-                    //           padding: EdgeInsets.all(20.0),
-                    //           decoration: BoxDecoration(
-                    //               borderRadius: BorderRadius.circular(10.0),
-                    //               color: Colors.white,
-                    //               boxShadow: [
-                    //                 BoxShadow(
-                    //                     blurRadius: 120.0,
-                    //                     offset: Offset(0, 10.0))
-                    //               ]),
-                    //           child: Text('${suggestionlinkes[index].sugText}',
-                    //               style: TextStyle(
-                    //                   color: Colors.black,
-                    //                   fontWeight: FontWeight.bold)),
-                    //         ),
-                    //       ],
-                    //     ));
                   },
                 ),
               ),
             ],
           ),
-          // TextButton(
-          //     style: TextButton.styleFrom(
-          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
-          //     onPressed: () {},
-          //     child: Text('Cheapest')),
-          // TextButton(
-          //     style: TextButton.styleFrom(
-          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
-          //     onPressed: () {},
-          //     child: Text('Recommanded')),
-          // TextButton(
-          //     style: TextButton.styleFrom(
-          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
-          //     onPressed: () {},
-          //     child: Text('Nearest')),
-          // TextButton(
-          //     style: TextButton.styleFrom(
-          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
-          //     onPressed: () {},
-          //     child: Text('Electric')),
-          // TextButton(
-          //     style: TextButton.styleFrom(
-          //         minimumSize: Size.zero, padding: EdgeInsets.zero),
-          //     onPressed: () {},
-          //     child: Text('Luxury')),
         ],
       ),
     );
