@@ -26,6 +26,7 @@ class MapSampleState extends State<MapSample> {
   Widget build(BuildContext context) {
     return new Scaffold(
       body: SafeArea(
+        bottom: false,
         child: GoogleMap(
           mapType: MapType.hybrid,
           initialCameraPosition: _kGooglePlex,

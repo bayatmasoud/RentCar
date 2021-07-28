@@ -7,7 +7,7 @@ class SuggestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 7),
-      height: MediaQuery.of(context).size.height * 0.1,
+      height: MediaQuery.of(context).size.height * 0.12,
       width: MediaQuery.of(context).size.width * 0.98,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,25 +34,16 @@ class SuggestionCard extends StatelessWidget {
                                   offset: Offset(0, 0.1), blurRadius: 0.05)
                             ]),
                         child: Container(
-                          width: 140,
+                          width: 130,
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              suggestionlinkes[index].sugImage,
-                              SizedBox(
-                                height: 7.0,
-                              ),
                               Container(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 10.0),
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(18.0),
-                                      boxShadow: [
-                                        BoxShadow(
-                                            offset: Offset(0, 0.5),
-                                            blurRadius: 3)
-                                      ]),
+                                  padding: EdgeInsets.only(top: 2),
+                                  child: suggestionlinkes[index].sugImage),
+                              Container(
+                                  padding: EdgeInsets.only(left: 5.0, top: 3),
                                   child: Text(
                                       '${suggestionlinkes[index].sugText}'))
                             ],

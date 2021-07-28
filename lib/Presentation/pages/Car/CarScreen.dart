@@ -5,15 +5,31 @@ import 'CarScreenSlider.dart';
 import 'EquipmentBoxes.dart';
 
 class CarScreen extends StatefulWidget {
+  final String carId;
+  CarScreen({@required this.carId});
+
   @override
-  _CarScreenState createState() => _CarScreenState();
+  _CarScreenState createState() => _CarScreenState(carId: this.carId);
 }
 
 class _CarScreenState extends State<CarScreen> {
+  String carId;
+  String _carId;
+  _CarScreenState({@required this.carId});
   final _carEq = carEquipments;
+
+  @override
+  void initState() {
+    if (carId != null)
+      _carId = carId;
+    else
+      _carId = '1';
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    int perday = (_carEq[0].perday).ceil();
+    int perday = (_carEq[int.parse(_carId) - 1].perday).ceil();
 
     return Scaffold(
       body: SafeArea(
@@ -23,7 +39,7 @@ class _CarScreenState extends State<CarScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CarScreenSlider(carEq: _carEq[0]),
+              CarScreenSlider(carEq: _carEq[int.parse(_carId) - 1]),
               Container(
                 child: Card(
                   elevation: 0,
@@ -57,7 +73,7 @@ class _CarScreenState extends State<CarScreen> {
                                 onPressed: () {}, child: Text('Book Now'))
                           ],
                         ),
-                        Equipments(carEq: _carEq[0])
+                        Equipments(carEq: _carEq[int.parse(_carId) - 1])
                       ],
                     ),
                   ),

@@ -177,7 +177,8 @@ class CarCarDecorated extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => CarScreen()),
+                                    builder: (context) =>
+                                        CarScreen(carId: carModel.id)),
                               );
                             },
                             child: Text('Detail')),
@@ -189,7 +190,8 @@ class CarCarDecorated extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => CarScreen()),
+                                    builder: (context) =>
+                                        CarScreen(carId: carModel.id)),
                               );
                             },
                             child: Text('Deal')),

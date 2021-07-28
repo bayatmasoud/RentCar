@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:istanbul_rent_car/Presentation/Cards/SearchBar.dart';
+import 'package:simple_drawer/simple_drawer.dart';
 
 class HomeScreenTop extends StatelessWidget {
   final Function triggerAnimation;
@@ -11,12 +12,19 @@ class HomeScreenTop extends StatelessWidget {
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         IconButton(
           icon: Icon(Icons.settings),
-          onPressed: triggerAnimation,
+          onPressed: () {}, //triggerAnimation,
         ),
         SearchBarCard(),
-        IconButton(icon: Icon(Icons.add_alert_rounded), onPressed: () {}),
-        CircleAvatar(
-          backgroundImage: AssetImage('asset/images/profile.jpg'),
+        IconButton(
+            icon: Icon(Icons.filter_alt),
+            onPressed: () {
+              SimpleDrawer.activate("top");
+            }),
+        GestureDetector(
+          onTap: triggerAnimation,
+          child: CircleAvatar(
+            backgroundImage: AssetImage('asset/images/profile.jpg'),
+          ),
         )
       ]),
     );

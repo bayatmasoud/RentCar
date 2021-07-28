@@ -21,7 +21,7 @@ class CarCardModel {
 
 var carCardModel = [
   CarCardModel(
-      id: '0',
+      id: '1',
       carImage: Image.asset('asset/images/5.jpg'),
       carCardTitle: 'Toyota F5',
       subtitle: 'Some of the best',
@@ -36,7 +36,7 @@ var carCardModel = [
       ],
       brandImage: Image.asset('asset/images/hertz.jpg', fit: BoxFit.cover)),
   CarCardModel(
-      id: '0',
+      id: '2',
       carImage: Image.asset('asset/images/4.jpg'),
       carCardTitle: 'Hynda i20',
       subtitle: 'Small and beautifull',
@@ -49,7 +49,7 @@ var carCardModel = [
       ],
       brandImage: Image.asset('asset/images/tesla.jpg', fit: BoxFit.cover)),
   CarCardModel(
-      id: '0',
+      id: '3',
       carImage: Image.asset('asset/images/3.jpg'),
       carCardTitle: 'Audio 2021',
       subtitle: 'Fast and Security',
@@ -62,12 +62,11 @@ var carCardModel = [
       ],
       brandImage: Image.asset('asset/images/Audio.png', fit: BoxFit.cover)),
   CarCardModel(
-      id: '0',
+      id: '4',
       carImage: Image.asset('asset/images/2.jpg'),
       carCardTitle: 'Perid SLX',
       subtitle: 'It\'s just for Iranain people',
-      detail:
-          'Confortable and simple driving befor you get can test and drive free',
+      detail: 'Confortable and simple  you get can test and drive free',
       carEquipmentCarCard: [
         Icon(Icons.person),
         Icon(Icons.airplanemode_inactive),
@@ -78,7 +77,7 @@ var carCardModel = [
       ],
       brandImage: Image.asset('asset/images/hertz.jpg', fit: BoxFit.cover)),
   CarCardModel(
-      id: '0',
+      id: '5',
       carImage: Image.asset('asset/images/5.jpg'),
       carCardTitle: 'Saipa Vanet',
       subtitle: 'Take more move more',
@@ -89,5 +88,5 @@ var carCardModel = [
         Icon(Icons.accessible),
         Icon(Icons.add_location_alt),
       ],
-      brandImage: Image.asset('asset/images/hertz.jpg', fit: BoxFit.cover))
+      brandImage: Image.asset('asset/images/Audio.png', fit: BoxFit.cover))
 ];

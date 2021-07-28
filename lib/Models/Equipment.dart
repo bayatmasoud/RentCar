@@ -20,6 +20,7 @@ class CarEquipment {
   final String gearshift;
   final String airCondition;
   final List include;
+  final String carId;
   CarEquipment({
     @required this.id,
     @required this.door,
@@ -37,6 +38,7 @@ class CarEquipment {
     @required this.gearshift,
     @required this.airCondition,
     @required this.include,
+    @required this.carId,
   });
 
   Map<String, dynamic> toMap() {
@@ -57,6 +59,7 @@ class CarEquipment {
       'gearshift': gearshift,
       'airCondition': airCondition,
       'include': include,
+      'carId': carId,
     };
   }
 
@@ -78,6 +81,7 @@ class CarEquipment {
       gearshift: map['gearshift'],
       airCondition: map['airCondition'],
       include: List.from(map['include']),
+      carId: map['carId'],
     );
   }
 
@@ -88,7 +92,7 @@ class CarEquipment {
 
   @override
   String toString() {
-    return 'CarEquipment(id: $id, door: $door, likes: $likes, persons: $persons, kiloometer: $kiloometer, image: $image, brand: $brand, perday: $perday, avalibility: $avalibility, explain: $explain, address: $address, dreiver: $dreiver, gazoline: $gazoline, gearshift: $gearshift, airCondition: $airCondition, include: $include)';
+    return 'CarEquipment(id: $id, door: $door, likes: $likes, persons: $persons, kiloometer: $kiloometer, image: $image, brand: $brand, perday: $perday, avalibility: $avalibility, explain: $explain, address: $address, dreiver: $dreiver, gazoline: $gazoline, gearshift: $gearshift, airCondition: $airCondition, include: $include, carId: $carId)';
   }
 
   @override
@@ -111,7 +115,8 @@ class CarEquipment {
         other.gazoline == gazoline &&
         other.gearshift == gearshift &&
         other.airCondition == airCondition &&
-        listEquals(other.include, include);
+        listEquals(other.include, include) &&
+        other.carId == carId;
   }
 
   @override
@@ -131,19 +136,121 @@ class CarEquipment {
         gazoline.hashCode ^
         gearshift.hashCode ^
         airCondition.hashCode ^
-        include.hashCode;
+        include.hashCode ^
+        carId.hashCode;
   }
 }
 
 var carEquipments = [
   CarEquipment(
       likes: 120,
+      carId: '1',
       persons: 4,
       kiloometer: 1200,
       door: 4,
       address: 'Turkey/Istabul/Taksim Meydani/Hertz Agent ',
       avalibility: true,
       brand: 'asset/images/hertz.jpg',
+      dreiver: false,
+      explain: 'This is the best car',
+      id: 1,
+      image: 'asset/images/5.jpg',
+      perday: 120.0,
+      gazoline: 70,
+      gearshift: 'Auto',
+      airCondition: 'Auto',
+      include: [
+        'Free cancelation',
+        'Collision Damage Waiver',
+        'Third Party Liability (TPL)',
+        'Unlimited Mileage',
+        'Taxes',
+        'Airport Surcharge'
+      ]),
+  CarEquipment(
+      likes: 120,
+      carId: '2',
+      persons: 4,
+      kiloometer: 7000,
+      door: 4,
+      address: 'Turkey/Istabul/Taksim Meydani/Hertz Agent ',
+      avalibility: true,
+      brand: 'asset/images/tesla.jpg',
+      dreiver: false,
+      explain: 'This is the one of the best car',
+      id: 1,
+      image: 'asset/images/4.jpg',
+      perday: 1120.0,
+      gazoline: 70,
+      gearshift: 'Auto',
+      airCondition: 'Auto',
+      include: [
+        'Free cancelation',
+        'Collision Damage Waiver',
+        'Third Party Liability (TPL)',
+        'Unlimited Mileage',
+        'Taxes',
+        'Airport Surcharge'
+      ]),
+  CarEquipment(
+      likes: 120,
+      carId: '3',
+      persons: 4,
+      kiloometer: 120000,
+      door: 4,
+      address: 'Turkey/Istabul/Taksim Meydani/Hertz Agent ',
+      avalibility: true,
+      brand: 'asset/images/Audio.png',
+      dreiver: false,
+      explain: 'This is the best car',
+      id: 1,
+      image: 'asset/images/3.jpg',
+      perday: 1234.0,
+      gazoline: 70,
+      gearshift: 'Auto',
+      airCondition: 'Auto',
+      include: [
+        'Free cancelation',
+        'Collision Damage Waiver',
+        'Third Party Liability (TPL)',
+        'Unlimited Mileage',
+        'Taxes',
+        'Airport Surcharge'
+      ]),
+  CarEquipment(
+      likes: 120,
+      carId: '4',
+      persons: 4,
+      kiloometer: 65000,
+      door: 4,
+      address: 'Turkey/Istabul/Taksim Meydani/Hertz Agent ',
+      avalibility: true,
+      brand: 'asset/images/hertz.jpg',
+      dreiver: false,
+      explain: 'This is the best car',
+      id: 1,
+      image: 'asset/images/2.jpg',
+      perday: 8.0,
+      gazoline: 70,
+      gearshift: 'Auto',
+      airCondition: 'Auto',
+      include: [
+        'Free cancelation',
+        'Collision Damage Waiver',
+        'Third Party Liability (TPL)',
+        'Unlimited Mileage',
+        'Taxes',
+        'Airport Surcharge'
+      ]),
+  CarEquipment(
+      likes: 120,
+      carId: '5',
+      persons: 4,
+      kiloometer: 1200,
+      door: 4,
+      address: 'Turkey/Istabul/Taksim Meydani/Hertz Agent ',
+      avalibility: true,
+      brand: 'asset/images/Audio.png',
       dreiver: false,
       explain: 'This is the best car',
       id: 1,

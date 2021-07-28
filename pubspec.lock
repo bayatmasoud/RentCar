@@ -29,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
+  chips_choice:
+    dependency: "direct main"
+    description:
+      name: chips_choice
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
   clock:
     dependency: transitive
     description:
@@ -95,6 +102,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+  simple_drawer:
+    dependency: "direct main"
+    description:
+      name: simple_drawer
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.10"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -158,4 +172,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
-  flutter: ">=0.11.9"
+  flutter: ">=1.17.0"
