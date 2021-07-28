@@ -68,7 +68,7 @@ class Equipments extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MapSample()),
+                        MaterialPageRoute(builder: (context) => CarMapFinder()),
                       );
                     },
                   ),
