@@ -68,6 +68,7 @@ class _HomePageViewState extends State<HomePageView>
                       });
                       sideBarAnimationcontroller.forward();
                     },
+                    page: 'home',
                   ),
                   SuggestionCard(),
                   Divider(

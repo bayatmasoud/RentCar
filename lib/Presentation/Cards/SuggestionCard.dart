@@ -40,8 +40,14 @@ class SuggestionCard extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Container(
-                                  padding: EdgeInsets.only(top: 2),
-                                  child: suggestionlinkes[index].sugImage),
+                                padding: EdgeInsets.only(top: 2),
+                                child: Image.asset(
+                                    suggestionlinkes[index].sugImage),
+                                height:
+                                    MediaQuery.of(context).size.height * 0.05,
+                                width:
+                                    MediaQuery.of(context).size.height * 0.05,
+                              ),
                               Container(
                                   padding: EdgeInsets.only(left: 5.0, top: 3),
                                   child: Text(
