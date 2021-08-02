@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:istanbul_rent_car/Presentation/pages/BottomFilter/FilterCar.dart';
+import 'package:istanbul_rent_car/Presentation/pages/packages/BottomFilter/FilterCar.dart';
 
-import 'HomeScreenPageView.dart';
+import 'packages/HomeScreenPageView.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

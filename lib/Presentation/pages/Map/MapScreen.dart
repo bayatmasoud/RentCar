@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:istanbul_rent_car/Presentation/Cards/SuggestionCard.dart';
-import 'package:istanbul_rent_car/Presentation/pages/BottomFilter/FilterCar.dart';
-import 'package:istanbul_rent_car/Presentation/pages/Home/HomeScreenTop.dart';
-import 'package:istanbul_rent_car/Presentation/pages/SideSlider/SideSlider.dart';
+import 'package:istanbul_rent_car/Presentation/pages/Home/packages/HomeScreenTop.dart';
+import 'package:istanbul_rent_car/Presentation/pages/packages/BottomFilter/FilterCar.dart';
+import 'package:istanbul_rent_car/Presentation/pages/packages/SideSlider/SideSlider.dart';
 
 class CarMapFinder extends StatefulWidget {
   //@override

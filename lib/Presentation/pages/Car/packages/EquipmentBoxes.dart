@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:istanbul_rent_car/Models/Equipment.dart';
-import 'package:istanbul_rent_car/Presentation/pages/Map/MapScreen.dart';
+import 'package:istanbul_rent_car/Router.dart';
 import 'Equipment.dart';
 import 'EquipmentDecorator.dart';
 import 'WhatsInclude.dart';
@@ -66,13 +66,7 @@ class Equipments extends StatelessWidget {
                       favIcon: Icon(Icons.location_on),
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => CarMapFinder(
-                                  triggerAnimation: null,
-                                )),
-                      );
+                      PageRoutator().routePage('mapPage', context);
                     },
                   ),
                   SizedBox(height: 10.0),

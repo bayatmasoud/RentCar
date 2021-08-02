@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:istanbul_rent_car/Presentation/Cards/CarCard.dart';
 import 'package:istanbul_rent_car/Presentation/Cards/SuggestionCard.dart';
-import 'package:istanbul_rent_car/Presentation/pages/SideSlider/SideSlider.dart';
+import 'package:istanbul_rent_car/Presentation/pages/packages/SideSlider/SideSlider.dart';
 
 import 'HomeScreenTop.dart';
 
@@ -75,7 +75,9 @@ class _HomePageViewState extends State<HomePageView>
                     color: Colors.grey,
                     height: 15.0,
                   ),
-                  CarCard(),
+                  Container(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      child: Wrap(children: [CarCard()])),
                 ],
               ),
             ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:istanbul_rent_car/Models/Equipment.dart';
-import 'CarScreenSlider.dart';
-import 'EquipmentBoxes.dart';
+import 'packages/CarScreenSlider.dart';
+import 'packages/EquipmentBoxes.dart';
 
 class CarScreen extends StatefulWidget {
   final String carId;
